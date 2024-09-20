@@ -10,4 +10,8 @@ public class Bishop extends Piece{
         String[] moves = {"NE SE SW NW", "8"};
         return moves;
     }
+
+    public String toString() {
+        return "b";
+    } 
 }

@@ -1,13 +1,34 @@
 public class Board {
+
+    // Initializes array of pieces and alphabet array for locating pieces
     private Piece[][] board = new Piece[8][8];
     public static String[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H"};
 
+    // Constructor for creating a new board
     public Board() {
         board = new Piece[8][8];
         this.resetBoard();
     }
 
+    // Places the pieces in their starting position 
     public void resetBoard() {
+
+        // Placing Pawns
+        // Loops each row
+        for (int i = 1; i < 8; i += 5) {
+
+            // Loops each piece in each row
+            for (int j = 0; j < 8; j ++) {
+
+                // Decides whether or not to place a white or black piece 
+                if (i == 6) {
+                    board[i][j] = new Pawn(true);
+                } else {
+                    board[i][j] = new Pawn(false);
+                }
+            }
+        }
+
         // Placing Rooks
         for (int i = 0; i < 8; i += 7) {
             for (int j = 0; j < 8; j += 7) {
@@ -60,8 +81,13 @@ public class Board {
 
     }
 
+    // Prints the board array items with lines for separation 
     public void printBoard() {
+
+        // Loops the rows
         for (int i = 0; i < board.length; i ++) {
+
+            // Prints the letter for each row, then loops each square in each row 
             System.out.print(alphabet[7-i]);
             for(int j = 0; j < board[1].length; j ++) {
                 if (board[i][j] != null) {

@@ -1,3 +1,4 @@
+// Creates layout for all pieces on the board 
 public abstract class Piece {
 
     public boolean white;
@@ -18,6 +19,7 @@ public abstract class Piece {
     
     public abstract String[] moves();
 
+    // Returns the properly cased character for black or white
     public String toString() {
         if(white) {
             return whitePieces[type];

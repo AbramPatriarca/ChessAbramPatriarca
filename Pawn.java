@@ -10,5 +10,4 @@ public class Pawn extends Piece{
         String[] moves = {"N", "1", "NE NW"};
         return moves;
     }
-
 }
