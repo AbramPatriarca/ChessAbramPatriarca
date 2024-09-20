@@ -1,14 +1,13 @@
-public class Rook extends Piece{
+public class Knight extends Piece{
 
-    public Rook(boolean white) {
+    public Knight(boolean white) {
         this.white = white;
-        this.type = 1;
+        this.type = 2;
     }
-
     public String[] moves() {
         // {Direction Move, Maximum Place Moves, Capture Moves (optional)}
-        String[] moves = {"N E S W", "8"};
+        String[] moves = {"K", "4"};
         return moves;
     }
-
+    
 }
